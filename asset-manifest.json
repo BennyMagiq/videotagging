@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/videotagging/static/css/main.e6c13ad2.css",
+    "main.js": "/videotagging/static/js/main.4e475430.js",
+    "static/js/453.7a3169a8.chunk.js": "/videotagging/static/js/453.7a3169a8.chunk.js",
+    "index.html": "/videotagging/index.html",
+    "main.e6c13ad2.css.map": "/videotagging/static/css/main.e6c13ad2.css.map",
+    "main.4e475430.js.map": "/videotagging/static/js/main.4e475430.js.map",
+    "453.7a3169a8.chunk.js.map": "/videotagging/static/js/453.7a3169a8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4e475430.js"
+  ]
+}
