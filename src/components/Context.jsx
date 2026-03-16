@@ -12,7 +12,7 @@ export default function CsvProvider({ children }) {
   useEffect(() => {
     const loadCsv = async () => {
       try { 
-        const response = await fetch('/data.csv');
+        const response = await fetch(process.env.PUBLIC_URL + '/data.csv');
         const text = await response.text();
         const parsed = Papa.parse(text, { header: true }).data;
         setCsvData(parsed);
