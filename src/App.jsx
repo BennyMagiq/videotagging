@@ -1,46 +1,44 @@
-import ShortOutcome from './components/ShortOutcome'; 
-import PassAccu from './components/PassAccu';
-import PassByLength from './components/PassByLength';
-import ShortsOnTarget from './components/ShortsOnTarget';
-import CompletedDribbles from './components/CompletedDribbles';
-import DribblesByLength from './components/DribblesByLength';
-import DribblePercentage from './components/DribblePercentage';
-import DribblesByDirection from './components/DribblesByDirection';
-import Fouls from './components/Fouls';
-import BookingsGraph from './components/BookingsGraph';
-import SavesByType from './components/SavesByType';
-import OffsideGraph from './components/OffsideGraph';
-import DistributionByType from './components/DistributionByType';
-import Corners from './components/Corners';
+import { useState } from 'react';
+import './App.css';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import DetailView from './components/DetailView';
 import CsvProvider from './components/Context';
-import GkCompletion from './components/GkCompletion';
-import GtCompletion from './components/GtCompletion';
-
-
-
 
 
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [selectedStat, setSelectedStat] = useState(null);
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setSelectedStat(null);
+  };
+
+  const handleSelectStat = (statId) => {
+    setSelectedStat(statId);
+  };
+
+  const handleBack = () => {
+    setSelectedStat(null);
+  };
+
+  if (!user) {
+    return <Login onLogin={handleLogin} />;
+  }
+
   return (
     <CsvProvider>
-      <PassByLength />
-      <PassAccu />
-      <ShortOutcome /> 
-      <ShortsOnTarget /> 
-      <CompletedDribbles />
-      <DribblesByLength />
-      <DribblePercentage />
-      <DribblesByDirection />
-      <Fouls />
-      <BookingsGraph />
-      <SavesByType />
-      <OffsideGraph />
-      <DistributionByType />
-      <Corners />
-      <GkCompletion />
-      <GtCompletion />
-
+      {selectedStat ? (
+        <DetailView statId={selectedStat} onBack={handleBack} />
+      ) : (
+        <Dashboard user={user} onSelectStat={handleSelectStat} onLogout={handleLogout} />
+      )}
     </CsvProvider>
   );
 }

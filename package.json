@@ -2,7 +2,7 @@
   "name": "videotagging",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/videotagging",
+  "homepage": "https://BennyMagiq.github.io/videotagging",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -44,3 +44,5 @@
     "gh-pages": "^6.3.0"
   }
 }
+
+

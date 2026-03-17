@@ -2,6 +2,8 @@ import React, { useContext, useMemo, useState } from 'react';
 import { CsvContext } from './Context'; // Adjust the path if needed
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
 
+/* eslint-disable no-unused-expressions */
+
 const ShortOutcome = () => {
   const csvData = useContext(CsvContext);
   const [selectedTeam, setSelectedTeam] = useState('All');
