@@ -4,7 +4,7 @@ import Papa from 'papaparse';
 export const CsvContext = createContext([]);
 export const CsvActionsContext = createContext(null);
 
-const REQUIRED = ['Event','Timestamp','Result','Player Name','Team Name'];
+const REQUIRED = ['Event','Timestamp','Result','Type','Pass Outcome','Shot outcome','Pressure','Player Name','Shirt Number','Team Name','Start Position X','Start Position Y','Foot used','Receiver Name','Receiver Shirt Number','End Position X','End Position Y','Defensive Action','Side','Distribution','Goal Location','Booking','Game_State','length_x','length_y','length_euclidean','angle_degrees','direction'];
 function parseDataset(text, filename) {
   let rows;
   if (filename.toLowerCase().endsWith('.json')) {
