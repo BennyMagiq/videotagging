@@ -1,0 +1,12 @@
+.app-shell{display:flex;min-height:100vh;background:#f4f6f9;font-family:Arial,Helvetica,sans-serif}
+.app-sidebar{width:222px;flex:0 0 222px;background:#fff;border-right:1px solid #dfe5ed;min-height:100vh;padding:18px 12px;box-sizing:border-box}
+.app-brand{font-weight:700;color:#1e3c72;font-size:17px;display:flex;gap:9px;align-items:center;padding:12px 9px 25px}
+.app-nav{display:flex;flex-direction:column;gap:7px}
+.app-nav-item{display:flex;align-items:center;gap:12px;padding:12px 15px;text-align:left;border:0;border-radius:9px;background:transparent;color:#334155;font-size:15px;cursor:pointer;font-family:inherit}
+.app-nav-item:hover{background:#f1f5fb}
+.app-nav-item.active{background:#eaf1fc;color:#1e3c72;font-weight:700}
+.nav-icon{width:23px;text-align:center;font-size:19px;color:#5275a2}
+.app-main{min-width:0;flex:1}
+.app-main .dashboard{min-height:100vh}
+.app-main .detail-view{min-height:100vh}
+@media(max-width:720px){.app-shell{display:block}.app-sidebar{width:auto;min-height:0;padding:9px 10px;border-right:0;border-bottom:1px solid #dfe5ed}.app-brand{padding:5px 6px 10px;font-size:15px}.app-nav{display:flex;flex-direction:row;gap:4px;overflow-x:auto;padding-bottom:3px}.app-nav-item{white-space:nowrap;flex:0 0 auto;font-size:13px;padding:9px 10px}.nav-icon{font-size:14px;width:auto}}
